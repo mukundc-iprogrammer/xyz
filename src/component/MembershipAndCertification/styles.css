@@ -1,0 +1,83 @@
+.platforms {
+    background: transparent;
+    height: 100%;
+    margin: auto;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+  }
+  .platforms .slide-track {
+    display: flex;
+    width: calc(200px * 32);
+    top: 30%;
+    position: relative;
+  }
+  .platforms a.taphover {
+    height: 100%;
+    width: 200px;
+    transition: all .5s ease;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 0 20px;
+  }
+  .platforms a.taphover:hover, .hover {
+    transform: scale(1.1);
+    opacity: 1 !important;
+  }
+  .platforms a.taphover img {
+    position: relative; 
+    width: 200px;
+    height: auto;
+  }
+  #top {
+    margin-top: 0;
+  }
+  #middle {
+    margin-top: 15px;
+  }
+  #bottom {
+    margin-top: 30px;
+  }
+  #top h2, #middle h2, #bottom h2 {
+    position: relative;
+    display: inlne-block;
+    font-family: 'Barlow Condensed', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #1d1d35;
+    margin-top: 10px;
+    opacity: 0;
+    transition: all .5s ease;
+  }
+  #top:hover h2, #middle:hover h2, #bottom:hover h2 {
+    opacity: 1;
+  }
+  
+  /* Responsive */
+  
+  @media only screen and (max-width: 800px) {
+    body .platforms {
+      bottom: -30px;
+    }
+    body .slider .slide-track {
+      width: calc(150px * 32);
+    }
+    body .platforms a.taphover, .platforms a.taphover img {
+      width: 150px;
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    body .platforms {
+      bottom: -70px;
+    }
+    body .slider .slide-track {
+      width: calc(120px * 26);
+    }
+    body .platforms a.taphover, .platforms a.taphover img {
+      width: 120px;
+    }
+  }
