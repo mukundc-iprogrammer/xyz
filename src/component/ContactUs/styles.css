@@ -1,0 +1,48 @@
+.facebook {
+  background: url("../../images/facebook.png") no-repeat;
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  vertical-align: inherit;
+  background-size: cover;
+}
+
+.instagram {
+    background: url("../../images/instagram.png") no-repeat;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    vertical-align: inherit;
+    background-size: cover;
+  }
+
+  .twitter {
+    background: url("../../images/twitter.png") no-repeat;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    vertical-align: inherit;
+    background-size: cover;
+  }
+
+  .linkedin {
+    background: url("../../images/linkedin.png") no-repeat;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    vertical-align: inherit;
+    background-size: cover;
+  }
+
+  .youtube {
+    background: url("../../images/youtube.png") no-repeat;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    vertical-align: inherit;
+    background-size: cover;
+  }
+
+  .borderRight {
+      border-right: 1px solid grey;
+  }

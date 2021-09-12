@@ -23,6 +23,7 @@ import MembershipAndCertification from "./component/MembershipAndCertification/M
 import Footer from "./component/Footer/Footer";
 import Services from "./component/Services/Services";
 import ContactUs from "./component/ContactUs/ContactUs";
+import { isMobile } from "react-device-detect";
 
 class App extends React.Component {
   constructor(props) {
@@ -57,7 +58,8 @@ class App extends React.Component {
         display: "flex",
         alignItems: "center",
         background: "black",
-        width: "100%",
+        maxWidth: "100vw",
+        minWidth: "100vw",
         color: "white",
         fontFamily: "Lobster",
         height: "60px",
@@ -96,50 +98,94 @@ class App extends React.Component {
     return (
       <div>
         <div style={styles.container} className="justify-content-between">
+          {/* <div className="col-12"> */}
           <MenuButton
             open={this.state.menuOpen}
             onClick={() => this.handleMenuClick()}
             color="white"
-            style={{position:'absolute'}}
+            style={{ position: "absolute" }}
           />
-          <div style={styles.logo}>ATPM</div>
+          {!isMobile && <div style={styles.logo}>ATPM</div>}
           <div>
             <i
-            style={{border: '1px solid white', padding: '5px', borderRadius: '10px', backgroundColor: 'white', color: 'black', fontSize: '22px'}}
+              style={{
+                border: "1px solid white",
+                padding: "5px",
+                borderRadius: "10px",
+                backgroundColor: "white",
+                color: "black",
+                fontSize: "22px",
+              }}
               onClick={() =>
                 window.open("whatsapp://send?text=hello&phone=+917000169301")
               }
               className="me-3 fa fa-whatsapp c-p"
               aria-hidden="true"
-            ><span style={{fontSize: '22px', margin: '0 10px', verticalAlign: 'middle'}}>Contact Us</span></i>
+            >
+              {!isMobile &&<span
+                style={{
+                  fontSize: "22px",
+                  margin: "0 10px",
+                  verticalAlign: "middle",
+                }}
+              >
+                Contact Us
+              </span>}
+            </i>
             <i
-              style={{border: '1px solid white', padding: '5px', borderRadius: '10px', backgroundColor: 'white', color: 'black', fontSize: '22px'}}
+              style={{
+                border: "1px solid white",
+                padding: "5px",
+                borderRadius: "10px",
+                backgroundColor: "white",
+                color: "black",
+                fontSize: "22px",
+              }}
               onClick={() => window.open("tel:${+917000169301}")}
               className="me-3 fa fa-phone c-p"
               aria-hidden="true"
-            ><span style={{fontSize: '22px', margin: '0 10px', verticalAlign: 'middle'}}>+917000169301</span></i>
+            >
+              {!isMobile && <span
+                style={{
+                  fontSize: "22px",
+                  margin: "0 10px",
+                  verticalAlign: "middle",
+                }}
+              >
+                +917000169301
+              </span>}
+            </i>
+          {/* </div> */}
           </div>
         </div>
         <Menu open={this.state.menuOpen}>{menuItems}</Menu>
-        
-        <div className="pt-1">
+
+        <div className="pt-1" style={{ marginTop: "60px"}}>
           <Slider />
         </div>
         <div
           id="AboutUs"
           className="mb-3 mt-3 p-5"
-          style={{ backgroundColor: "#dedfe090", textAlign: 'center' }}
+          style={{ backgroundColor: "#dedfe090", textAlign: "center" }}
         >
-            <h1>About us</h1>
+          <h1>About us</h1>
           <Card className="p-5">
             <AboutUs />
           </Card>
         </div>
-        <div id="Services" className="mb-3 p-5" style={{textAlign: 'center', backgroundColor: "#fae2aa90"}}>
+        <div
+          id="Services"
+          className="mb-3 p-5"
+          style={{ textAlign: "center", backgroundColor: "#fae2aa90" }}
+        >
           <h1>Services</h1>
           <Services />
         </div>
-        <div id="ContactUs" className="mb-3 p-5" style={{textAlign: 'center', backgroundColor: "#aafaee90"}}>
+        <div
+          id="ContactUs"
+          className="mb-3 p-5"
+          style={{ textAlign: "center", backgroundColor: "#aafaee90" }}
+        >
           <h1>Contact us</h1>
           <ContactUs />
         </div>
@@ -373,23 +419,23 @@ class MenuButton extends React.Component {
 // }
 
 /* Main.jsx */
-class Main extends React.Component {
-  render() {
-    const styles = {
-      main: {
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        height: "100vh",
-      },
-    };
+// class Main extends React.Component {
+//   render() {
+//     const styles = {
+//       main: {
+//         display: "flex",
+//         flexDirection: "column",
+//         alignItems: "center",
+//         height: "100vh",
+//       },
+//     };
 
-    return (
-      <div style={styles.main}>
-        <App />
-      </div>
-    );
-  }
-}
+//     return (
+//       <div style={styles.main}>
+//         <App />
+//       </div>
+//     );
+//   }
+// }
 
 export default App;

@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { isMobile, isMobileOnly } from "react-device-detect";
 import { Waypoint } from "react-waypoint";
 import { Card } from "reactstrap";
 import "./styles.css";
@@ -35,7 +36,7 @@ const Services = () => {
     <div>
       <Card className="p-5 mb-3">
         <h1 style={{ textAlign: "left" }}>Forex</h1>
-        <div className="d-flex">
+        <div className={!isMobile ? "d-flex" : ""}>
           <div>
             <div style={{ textAlign: "justify", marginRight: "30px" }}>
               In publishing and graphic design, Lorem ipsum is a placeholder
@@ -54,6 +55,7 @@ const Services = () => {
           <div>
             <img
               height=""
+              width={isMobileOnly ? "200px" : ''}
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk6YQpkyztFRNd-mZI-C0nxJ7A-XsAPRy21A&usqp=CAU"
             />
           </div>
@@ -61,7 +63,7 @@ const Services = () => {
         <Waypoint>
           <div className="row"  style={{textAlign: 'justify'}}>
             <div
-              className="col-6 class1"
+              className="col-12 col-md-12 col-lg-6 class1"
               id="animated_div1"
               style={{ display: "none" }}
             >
@@ -69,7 +71,7 @@ const Services = () => {
               <span>Currency Exchange</span>
             </div>
             <div
-              className="col-6 class2"
+              className="col-12 col-md-12 col-lg-6 class2"
               id="animated_div2"
               style={{ display: "none" }}
             >
@@ -77,7 +79,7 @@ const Services = () => {
               <span>Forex Card</span>
             </div>
             <div
-              className="col-6 class3"
+              className="col-12 col-md-12 col-lg-6 class3"
               id="animated_div3"
               style={{ display: "none" }}
             >
@@ -85,7 +87,7 @@ const Services = () => {
               <span>Remittance</span>
             </div>
             <div
-              className="col-6 class4"
+              className="col-12 col-md-12 col-lg-6 class4"
               id="animated_div4"
               style={{ display: "none" }}
             >
@@ -97,10 +99,11 @@ const Services = () => {
       </Card>
       <Card className="p-5 mb-3">
         <h1 style={{ textAlign: "left" }}>Tours & Travels</h1>
-        <div className="d-flex">
+        <div className={!isMobile ? "d-flex" : ""}>
           <div>
             <img
               height=""
+              width={isMobileOnly ? "200px" : ''}
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk6YQpkyztFRNd-mZI-C0nxJ7A-XsAPRy21A&usqp=CAU"
             />
           </div>
@@ -123,7 +126,7 @@ const Services = () => {
         <Waypoint>
           <div className="row" style={{textAlign: 'justify'}}>
             <div
-              className="col-6 class5"
+              className="col-12 col-md-12 col-lg-6  class5"
               id="animated_div5"
               style={{ display: "none"}}
             >
@@ -131,7 +134,7 @@ const Services = () => {
               <span>Air Tickets</span>
             </div>
             <div
-              className="col-6 class6"
+              className="col-12 col-md-12 col-lg-6 class6"
               id="animated_div6"
               style={{ display: "none" }}
             >
@@ -139,7 +142,7 @@ const Services = () => {
               <span>International Holiday Packages</span>
             </div>
             <div
-              className="col-6 class7"
+              className="col-12 col-md-12 col-lg-6 class7"
               id="animated_div7"
               style={{ display: "none" }}
             >
@@ -147,7 +150,7 @@ const Services = () => {
               <span>Travel Insurance</span>
             </div>
             <div
-              className="col-6 class8"
+              className="col-12 col-md-12 col-lg-6 class8"
               id="animated_div8"
               style={{ display: "none" }}
             >
@@ -159,7 +162,7 @@ const Services = () => {
       </Card>
       <Card className="p-5 mb-3">
         <h1 style={{ textAlign: "left" }}>Visa</h1>
-        <div className="d-flex">
+        <div className={!isMobile ? "d-flex" : ""}>
           <div>
             <div style={{ textAlign: "justify", marginRight: "30px" }}>
               In publishing and graphic design, Lorem ipsum is a placeholder
@@ -178,6 +181,7 @@ const Services = () => {
           <div>
             <img
               height=""
+              width={isMobileOnly ? "200px" : ''}
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk6YQpkyztFRNd-mZI-C0nxJ7A-XsAPRy21A&usqp=CAU"
             />
           </div>

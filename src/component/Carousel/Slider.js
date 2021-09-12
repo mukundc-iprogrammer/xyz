@@ -1,4 +1,5 @@
 import React from "react";
+import { isMobile } from "react-device-detect";
 
 const Slide = (props) => {
   const btnContainer = {
@@ -16,7 +17,8 @@ const Slide = (props) => {
   };
   return (
     <React.Fragment>
-      <img src={props.image.link} width="100%" height="500px" alt="Sliderr_image" style={{objectFit: 'cover'}} />
+      <img src={props.image.link} height={!isMobile ? "500px" : "300px"} alt="Sliderr_image" style={{objectFit: 'cover', minWidth: '100vw', maxWidth: '100vw'}} />
+      {/* <img src={props.image.link} width={!isMobile ? "100%" : "100vw"} height={!isMobile ? "500px" : "300px"} alt="Sliderr_image" style={{objectFit: 'cover'}} /> */}
       {/* <h1>
         {props.image.title}
         <span style={btnContainer}>
